@@ -1,1 +1,58 @@
 @import 'tailwindcss';
+
+/* Manual dark mode styles for elements */
+:root.dark {
+  color-scheme: dark;
+  --bg-primary: #020617; /* slate-950 */
+  --bg-secondary: #0f172a; /* slate-900 */
+  --bg-tertiary: #1e293b; /* slate-800 */
+  --text-primary: #f1f5f9; /* slate-100 */
+  --text-secondary: #cbd5e1; /* slate-400 */
+  --border-color: #334155; /* slate-700 */
+}
+
+:root.dark body,
+:root.dark [class*="min-h-screen"] {
+  background-color: #020617;
+  color: #f1f5f9;
+}
+
+:root.dark [class*="bg-white"],
+:root.dark [class*="bg-gray-100"],
+:root.dark .bg-white {
+  background-color: #0f172a !important;
+  color: #f1f5f9;
+}
+
+:root.dark input,
+:root.dark select,
+:root.dark textarea {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+:root.dark input::placeholder {
+  color: #94a3b8;
+}
+
+:root.dark .border {
+  border-color: #334155 !important;
+}
+
+:root.dark .text-gray-500,
+:root.dark [class*="text-gray-"] {
+  color: #cbd5e1 !important;
+}
+
+:root.dark .text-gray-800,
+:root.dark .text-slate-900 {
+  color: #f1f5f9 !important;
+}
+
+:root.dark .hover\:bg-gray-50:hover {
+  background-color: #1e293b !important;
+}
+
+
+
