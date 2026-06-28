@@ -151,7 +151,12 @@ function App() {
           <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold text-sm flex-shrink-0">S</div>
           {sidebarOpen && <span className="font-bold text-sm">SalesPro</span>}
         </div>
-
+        <button
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className={`p-4 text-sm border-t ${border} ${darkMode ? "text-gray-400 hover:text-white" : "text-gray-400 hover:text-gray-800"} transition-all text-left`}
+        >
+          {sidebarOpen ? "◀ Collapse" : "▶"}
+        </button>
         {/* Nav items */}
         <nav className="flex-1 p-3 space-y-1">
           {[
@@ -175,12 +180,7 @@ function App() {
         </nav>
 
         {/* Collapse button */}
-        <button
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-          className={`p-4 text-sm border-t ${border} ${darkMode ? "text-gray-400 hover:text-white" : "text-gray-400 hover:text-gray-800"} transition-all text-left`}
-        >
-          {sidebarOpen ? "◀ Collapse" : "▶"}
-        </button>
+        
       </aside>
 
       {/* Main content */}
