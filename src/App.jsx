@@ -211,9 +211,6 @@ function App() {
             >
               ⬇️ Export CSV
             </button>
-            <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
-              A
-            </div>
           </div>
         </header>
 
